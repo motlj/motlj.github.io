@@ -1,0 +1,42 @@
+.green {
+	color: #39a621;
+}
+.center {
+	text-align: center;
+}
+.margin {
+	margin: 0;
+}
+#bc {
+	background-color: #FCDA9B;
+}
+#imageWidth {
+	width: 50%;
+}
+#img {
+	text-align: center;
+}
+.table {
+	color: red;
+ 	font-family: sans-serif;
+ }
+.float {
+	float: center
+}
+#container {
+	position: relative;
+	width: 800px;
+}
+#div1, #div2 {
+	position: absolute;
+	width: 400px;
+}
+#div1 {
+	left: 0;
+}
+#div2 {
+	left: 400px;
+}
+.paraOne {
+	color: #FFB300;
+}

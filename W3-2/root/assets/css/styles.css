@@ -1,0 +1,52 @@
+/*    . is class
+      # is id   */
+html {
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+h1 {
+	text-align: center;
+	color: white;
+	background-color: red;
+}
+
+h3 {
+	text-align: left;
+	color: #800000;
+}
+
+/*
+nav {
+	background-color: blue;
+	color: yellow;
+}
+
+a:link {
+	text-decoration: none;
+	color: yellow;
+}
+
+a:hover {
+	text-decoration: none;
+	color: orange;
+	}
+
+a:active {
+	text-decoration: none;
+	color: red;
+}
+*/
+
+.imgWidth {
+	width: 300px;
+	height: auto;
+}
+
+#navHead {
+	font-size: 18pt;
+	text-align: left;
+	text-align: middle;
+}

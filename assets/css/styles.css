@@ -33,20 +33,41 @@ a:hover {
 	text-decoration: none;
 	color: orange;
 	}
-
+*/
 a:active {
 	text-decoration: none;
 	color: red;
 }
-*/
+
 
 .imgWidth {
 	width: 300px;
-	height: auto;
+	height: 300px;
 }
 
 #navHead {
 	font-size: 18pt;
 	text-align: left;
 	text-align: middle;
+}
+
+input {
+	height: 50px
+	width: 300px;
+}
+
+.contact {
+	background-color: #65EEBF;
+	color: black;
+}
+
+#form {
+	font-family: monospace;
+	margin-left: 150px;
+}
+
+h2 {
+	margin-left: 25px;
+	font-family: monospace;
+	color: #FF0000;
 }

@@ -62,12 +62,11 @@
           $('#blog').append('<div class="row">');
           $.each(response.posts, function(key, value){
             $('#blog').append('<div class="col-lg-7"><h1>' + value.postTitle + '</h1><h2>' + value.postDate + '</h2><p>' + value.postContent + '</p></div>');
-          })
+          });
           $('#blog').append('</div>');
         }
       })
     }
-    console.log(request);
     $(document).ready(request);
 
 

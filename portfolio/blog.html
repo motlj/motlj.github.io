@@ -71,7 +71,7 @@
         type : 'GET',
         dataType : 'json',
         cache : 'false',
-        url : "blogPosts.JSON",
+        url : "blogPosts.json",
         success : function(response) {
           $('#blog').append('<div class="row featurette">');
           $.each(response.posts, function(key, value){

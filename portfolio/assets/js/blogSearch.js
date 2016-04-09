@@ -5,7 +5,7 @@ $(document).ready(function(){
         var filter = $(this).val(), count = 0;
  
         // Loop through the comment list
-        $("id="blog"").each(function(){
+        $("div h3 h4 p").each(function(){
  
             // If the list item does not contain the text phrase fade it out
             if ($(this).text().search(new RegExp(filter, "i")) < 0) {

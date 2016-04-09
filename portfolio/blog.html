@@ -35,7 +35,7 @@
   </div>
 
   <div class="container-fluid">
-    <h1>Josh's Blog</h1>
+    <h2>Josh's Blog</h2>
     <hr class="featurette-divider">
 
     <div class="row">
@@ -62,7 +62,7 @@
           $('#blog').append('<div class="row">');
           $.each(response.posts, function(key, value){
             console.log(value.postTitle);
-            $('#blog').append('<div class="col-lg-7"><h1>' + value.postTitle + '</h1><h2>' + value.postDate + '</h2><p>' + value.postContent + '</p></div>');
+            $('#blog').append('<div class="col-lg-7"><h3>' + value.postTitle + '</h3><h5>' + value.postDate + '</h5><p>' + value.postContent + '</p><hr class="featurette-divider"></div>');
           });
           $('#blog').append('</div>');
         }

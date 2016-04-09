@@ -36,6 +36,10 @@ body {
 .postContent {
 }
 
+.searchBar {
+	border: 2px;
+}
+
 /*navbar*/
 .navbar-custom {
   background-color: #4f4f4f;

@@ -5,3 +5,8 @@
 .banner {
 	width: 100%;
 }
+
+.circleBorder {
+	border: solid;
+	border-width: 1px;
+}

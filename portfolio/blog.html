@@ -75,7 +75,7 @@
         success : function(response) {
           $('#blog').append('<div class="row featurette">');
           $.each(response.posts, function(key, value){
-            $('#blog').append('<div class="col-lg-7"><h1>' + value.postTitle + '</h1><h2>' + value.postDate + '</h2><p>' + value.postContent + '</p>');
+            $('#blog').append('<div class="col-lg-7"><h1>' + value.postTitle + '</h1><h2>' + value.postDate + '</h2><p>' + value.postContent + '</p></div>');
           })
           $('#blog').append('</div>');
         }

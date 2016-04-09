@@ -5,7 +5,7 @@ $(document).ready(function(){
         var filter = $(this).val(), count = 0;
  
         // Loop through the comment list
-        $("nav ul li").each(function(){
+        $("blog").each(function(){
  
             // If the list item does not contain the text phrase fade it out
             if ($(this).text().search(new RegExp(filter, "i")) < 0) {
@@ -20,6 +20,6 @@ $(document).ready(function(){
  
         // Update the count
         var numberItems = count;
-        $("#filter-count").text("Number of Comments = "+count);
+        //$("#filter-count").text("Number of Comments = "+count);
     });
 });

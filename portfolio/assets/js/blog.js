@@ -8,7 +8,7 @@
           $('#blog').append('<div class="row">');
           $.each(response.posts, function(key, value){
             console.log(value.postTitle);
-            $('#blog').append('<div class="col-lg-12"><h3>' + value.postTitle + '</h3><h4>' + value.postDate + '</h4><p>' + value.postContent + '</p><hr class="featurette-divider"></div>');
+            $('#blog').append('<div class="col-lg-12"><p class="postTitle">' + value.postTitle + '</p><p class="postDate">' + value.postDate + '</p><p class="postContent">' + value.postContent + '</p><hr class="featurette-divider"></div>');
           });
           $('#blog').append('</div>');
         }

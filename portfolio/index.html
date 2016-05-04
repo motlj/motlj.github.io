@@ -36,26 +36,14 @@
 	  </div>
 	</div>
 
-  <div id="slideshow">
-   <div>
-     <img src="//farm6.static.flickr.com/5224/5658667829_2bb7d42a9c_m.jpg">
-   </div>
-   <div>
-     <img src="//farm6.static.flickr.com/5230/5638093881_a791e4f819_m.jpg">
-   </div>
-   <div>
-     Pretty cool eh? This slide is proof the content can be anything.
-   </div>
-</div>
-
- 	<!--<div id="myCarousel" class="carousel slide" data-ride="carousel">
-      Indicators 
+ 	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
         <ol class="carousel-indicators">
         <li data-target="assets/image/skyline.jpg" data-slide-to="0" class="active"></li>
         <li data-target="assets/image/lake.jpg" data-slide-to="1"></li>
         <li data-target="assets/image/matrix.gif" data-slide-to="2"></li>
       </ol>
-       wrapper for slide 
+      <!-- wrapper for slide -->
       <div class="carousel-inner" role="listbox">
         <div class="item active">
           <img class="first-slide banner" src="assets/image/skyline.jpg" alt="First slide">
@@ -93,7 +81,7 @@
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-    </div> /.carousel -->
+    </div> <!--/.carousel -->
     <br>
 
     <div class="container marketing"><center>
@@ -129,21 +117,12 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script>
-      $("#slideshow > div:gt(0)").hide();
-
-      setInterval(function() { 
-        $('#slideshow > div:first')
-            .fadeOut(1000)
-            .next()
-            .fadeIn(1000)
-            .end()
-            .appendTo('#slideshow');
-        },  
-      3000);
+    function(){
+      ('#myCarousel').carousel();
+    };
     </script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-    <!-- <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script> -->
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script type='text/javascript' src="http://imsky.github.io/holder/holder.js"></script>
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
  </body>
 </html>

@@ -167,3 +167,7 @@ body {
 .indent {
   margin-left: 40px;
 }
+
+footer {
+  text-align: center;
+}

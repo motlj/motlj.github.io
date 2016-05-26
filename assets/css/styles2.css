@@ -1,0 +1,105 @@
+html {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+
+/*=======Fonts========*/
+@font-face {
+  font-family: woodcut;
+  src: url(../fonts/WOODCUT.TTF);
+}
+
+#woodcut {
+  font-family: woodcut;
+  font-size: 60px;
+  color: #037613;
+}
+
+@font-face {
+  font-family: alfredo;
+  src: url(../fonts/ALFREDO.TTF);
+}
+
+#alfredo {
+  font-family: alfredo;
+  font-size: 60px;
+  color: #037613;
+}
+
+@font-face {
+  font-family: old;
+  src: url(../fonts/old.TTF);
+}
+
+#old {
+  font-family: old;
+  font-size: 40px;
+}
+
+@font-face {
+  font-family: custom;
+  src: url(../fonts/custom.TTF);
+}
+
+#custom {
+  font-family: custom;
+  font-size: 60px;
+  color: #037613;
+}
+
+
+a:link {
+    color: red;
+}
+
+/* mouse over link */
+a:hover {
+    color: purple;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+#pagebreak {
+	width: 90%;
+	height: 40px;
+}
+
+#name {
+	margin-top: 35px;
+	width: 90%;
+	display: block;
+}
+
+.me {
+  width: 250px;
+}
+
+.bottom {
+	margin-bottom: 0px;
+}
+
+#pic {
+    box-shadow: 0px 0px 3px #888888;
+    width: 50%;
+    max-width: 250px;
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 15px;
+}
+
+#project {
+  width: 80%;
+}
+
+#border {
+  border-width: 1px;
+  border-style: solid;
+}
+
+.template {
+  width: 75%;
+}

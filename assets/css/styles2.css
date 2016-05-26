@@ -3,6 +3,21 @@ html {
   margin-right: 35px;
 }
 
+#nameBanner {
+    font-size: 60px;
+}
+@media screen and (min-width: 400px) {
+    #nameBanner {font-size: 24px;}
+}
+@media screen and (min-width: 800px) {
+    #nameBanner {font-size: 36px;}
+}
+@media screen and (min-width: 1200px) {
+    #nameBanner {font-size: 48px;}
+}
+@media screen and (min-width: 1600px) {
+    #nameBanner {font-size: 60px;}
+}
 
 /*=======Fonts========*/
 @font-face {
@@ -12,7 +27,6 @@ html {
 
 #woodcut {
   font-family: woodcut;
-  font-size: 60px;
   color: #037613;
 }
 

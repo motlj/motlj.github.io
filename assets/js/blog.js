@@ -9,7 +9,7 @@ function request() {
       //$('#blog').append('<ul id="list">');
       $.each(response.posts, function(key, value){
         console.log(value.postTitle);
-        $('#blog').append('<section><figure>' + value.postTitle + '</figure></section>');
+        $('#blog').append('<section><figure><p><large><strong>' + value.postTitle + '</strong></large><br><em>' + value.postDate + '</em><br>' + value.postContent + '</p></figure></section>');
         //$('#blog').append('<div class="col-lg-12"><p><large><strong>' + value.postTitle + '</strong></large><br><em>' + value.postDate + '</em><br>' + value.postContent + '<br><br><br><br></p></div>');
       });
       //$('#blog').append('</ul>');

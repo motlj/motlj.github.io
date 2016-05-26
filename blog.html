@@ -62,7 +62,14 @@
     
 
     <div class="row">
-      <div class="col-lg-7" id="blog"></div>
+      <div class="col-lg-7"></div>
+        <section id="portfolio">
+          <section class="container">
+            <div class="figCont" id="blog">
+            </div>
+          </section>
+        </section>
+      </div>
     </div>
     <hr>
   <div class="row">
@@ -82,46 +89,43 @@
     <script src="assets/js/bootstrap.js"></script>
     <script>
       $(document).ready(function() {
-        var show_per_page = 5;
-        var number_of_items = $('#list').children('li').size();
-        var number_of_pages = Math.ceil(number_of_items / show_per_page);
-        $('body').append('<div class=controls></div><input id=current_page type=hidden><input id=show_per_page type=hidden>');
-        $('#current_page').val(0);
-        $('#show_per_page').val(show_per_page);
-        var navigation_html = '<a class="prev" onclick="previous()">Prev</a>';
-        var current_link = 0;
-        while (number_of_pages > current_link) {
-            navigation_html += '<a class="page" onclick="go_to_page(' + current_link + ')" longdesc="' + current_link + '">' + (current_link + 1) + '</a>';
-            current_link++;
+        var $pArr = $('#portfolio .figCont section');
+        var pArrLen = $pArr.length;
+        var pPerDiv = 3;
+        for (var i = 0; i < pArrLen; i += pPerDiv) {
+            $pArr.filter(':eq(' + i + '),:lt(' + (i + pPerDiv) + '):gt(' + i + ')').wrapAll('<div />');
         }
-        navigation_html += '<a class="next" onclick="next()">Next</a>';
-        $('.controls').html(navigation_html);
-        $('.controls .page:first').addClass('active');
-        $('#list').children().css('display', 'none');
-        $('#list').children().slice(0, show_per_page).css('display', 'block');
-      });
-      function go_to_page(page_num) {
-        var show_per_page = parseInt($('#show_per_page').val(), 0);
-        start_from = page_num * show_per_page;
-        end_on = start_from + show_per_page;
-        $('#list').children().css('display', 'none').slice(start_from, end_on).css('display', 'block');
-        $('.page[longdesc=' + page_num + ']').addClass('active').siblings('.active').removeClass('active');
-        $('#current_page').val(page_num);
-      }
-      function previous() {
-        new_page = parseInt($('#current_page').val(), 0) - 1;
-        //if there is an item before the current active link run the function
-        if ($('.active').prev('.page').length == true) {
-            go_to_page(new_page);
-        }
-      }
-      function next() {
-        new_page = parseInt($('#current_page').val(), 0) + 1;
-        //if there is an item after the current active link run the function
-        if ($('.active').next('.page').length == true) {
-            go_to_page(new_page);
-        }
-      }
-      </script>
+
+        $('#portfolio .figCont div:eq(0)').addClass('current');
+        $('#portfolio .figCont div').each(function() {
+            var i = $(this).index() + 1;
+            $('#portfolio .paging a:eq(0)').addClass('active');
+            $('#portfolio .paging').append('<a href=\"#portfolio\">' + i + '</a>');
+        });
+        $('#portfolio .paging a').click(function() {
+            var thisIndex = $(this).index(),
+                $allLinks = $(this).parent().find('a'),
+                $target = $(this.hash),
+                targetOffset = $target.offset().top - 71,
+                $figWrapper = $('#portfolio .figCont div:eq(' + thisIndex + ')');
+            $(this).addClass('active').siblings().removeClass('active');
+            $figWrapper.siblings().hide();
+            $allLinks.fadeTo(100, 0);
+            setTimeout(function() {
+                $allLinks.stop().animate({
+                    'opacity': 1
+                });
+                $figWrapper.fadeTo(200, 0.8);
+                $figWrapper.stop().animate({
+                    'opacity': 1
+                });
+            }, 300);
+            $('html,body').animate({
+                scrollTop: targetOffset
+            }, 300);
+            return false;
+        });
+    });
+    </script>
   </body>
 </html>

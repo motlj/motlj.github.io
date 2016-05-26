@@ -62,14 +62,7 @@
     
 
     <div class="row">
-      <div class="col-lg-7"></div>
-        <section id="portfolio">
-          <section class="container">
-            <div class="figCont" id="blog">
-            </div>
-          </section>
-        </section>
-      </div>
+      <div class="col-lg-7" id="blog"></div>
     </div>
     <hr>
   <div class="row">
@@ -87,45 +80,5 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/bootstrap.js"></script>
-    <script>
-      $(document).ready(function() {
-        var $pArr = $('#portfolio .figCont section');
-        var pArrLen = $pArr.length;
-        var pPerDiv = 3;
-        for (var i = 0; i < pArrLen; i += pPerDiv) {
-            $pArr.filter(':eq(' + i + '),:lt(' + (i + pPerDiv) + '):gt(' + i + ')').wrapAll('<div />');
-        }
-
-        $('#portfolio .figCont div:eq(0)').addClass('current');
-        $('#portfolio .figCont div').each(function() {
-            var i = $(this).index() + 1;
-            $('#portfolio .paging a:eq(0)').addClass('active');
-            $('#portfolio .paging').append('<a href=\"#portfolio\">' + i + '</a>');
-        });
-        $('#portfolio .paging a').click(function() {
-            var thisIndex = $(this).index(),
-                $allLinks = $(this).parent().find('a'),
-                $target = $(this.hash),
-                targetOffset = $target.offset().top - 71,
-                $figWrapper = $('#portfolio .figCont div:eq(' + thisIndex + ')');
-            $(this).addClass('active').siblings().removeClass('active');
-            $figWrapper.siblings().hide();
-            $allLinks.fadeTo(100, 0);
-            setTimeout(function() {
-                $allLinks.stop().animate({
-                    'opacity': 1
-                });
-                $figWrapper.fadeTo(200, 0.8);
-                $figWrapper.stop().animate({
-                    'opacity': 1
-                });
-            }, 300);
-            $('html,body').animate({
-                scrollTop: targetOffset
-            }, 300);
-            return false;
-        });
-    });
-    </script>
   </body>
 </html>

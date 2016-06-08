@@ -393,7 +393,7 @@
 })(jQuery);
 
 $('#light-pagination').pagination({
-    pages: 40,
+    pages: 5,
     cssStyle: 'light-theme',
     currentPage: 1
 });
